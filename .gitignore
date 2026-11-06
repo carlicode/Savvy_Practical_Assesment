@@ -3,3 +3,5 @@
 __pycache__/
 *.pyc
 .DS_Store
+# Notebook download copy
+data/downloaded_leads.csv

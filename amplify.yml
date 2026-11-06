@@ -1,0 +1,15 @@
+# AWS Amplify Hosting: publishes the static presentation in presentation/.
+# presentation/data.js is generated locally (python presentation/build_data.py)
+# and committed, so no build step or secrets are needed on AWS.
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - echo "Static site, nothing to build"
+  artifacts:
+    baseDirectory: presentation
+    files:
+      - '**/*'
+  cache:
+    paths: []

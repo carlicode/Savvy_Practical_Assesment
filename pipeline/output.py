@@ -133,7 +133,7 @@ def write_csv(leads):
         writer.writeheader()
         for row in sorted_leads(leads):
             writer.writerow(_csv_row(row))
-    print(f"Saved to {OUTPUT_PATH}")
+    print(f"Saved to {OUTPUT_PATH.relative_to(BASE_DIR)}")
 
 
 def _result(lead_id, ok, checks):

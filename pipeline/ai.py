@@ -241,6 +241,6 @@ def classify_leads_with_ai(leads):
         f"Run date: {run_at:%Y-%m-%d %H:%M:%S}\n"
     )
     output_path.write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
-    print(f"Saved to {output_path}")
+    print(f"Saved to {output_path.relative_to(BASE_DIR)}")
 
     return leads
