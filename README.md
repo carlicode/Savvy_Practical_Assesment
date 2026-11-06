@@ -2,6 +2,8 @@
 
 Loads 20 mock short-term rental leads, checks email, phone, budget, and timeline, links duplicates, and asks `gpt-4o-mini` for intent, priority, a next step, and a draft follow-up. Leads are then routed to a team or to human review. Results go to `output/`.
 
+**Presentation:** https://main.d2rlekfkelg009.amplifyapp.com, hosted on AWS Amplify. To republish after a new run: `./deploy_presentation.sh`
+
 ## Quickest way: the notebook
 
 Open [`reproduce.ipynb`](reproduce.ipynb) locally or in Google Colab and run the cells top to bottom. It installs the dependencies, downloads the CSV from a public, read-only Amazon S3 object (no manual upload; it falls back to the GitHub copy), asks for an OpenAI key in a hidden prompt, and runs every step with its output. The key is never printed or saved. A full run costs well under one cent.
