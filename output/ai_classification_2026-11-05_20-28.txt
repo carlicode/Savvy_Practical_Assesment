@@ -1,0 +1,60 @@
+Model: gpt-4o-mini
+Run date: 2026-11-05 20:28:48
+
+AI classification
+----------------------------------------------------------------------------------------------------
+SAV-1001: Buyer | High | 0.90 | review=false | tokens=423/127 | The lead is looking to purchase a short-term rental investment within 30 days and has a clear budget. Their desire to move quickly indicates urgency.
+Next: Schedule a property tour this week.
+Draft: Hi there! I see you're interested in short-term rental investments in Asheville. I'd love to discuss your needs further and schedule a property tour this week. Please let me know your availability!
+SAV-1002: Seller | Medium | 0.80 | review=false | tokens=423/140 | The lead is considering selling an established vacation rental and has a clear timeline of 60 days. They are seeking a valuation and net proceeds estimate, indicating serious intent.
+Next: Schedule a valuation appointment
+Draft: Hi there, thank you for reaching out about selling your vacation rental in Hendersonville, NC. I'd love to discuss your property and provide you with a valuation and net proceeds estimate. Please let me know a good time for us to connect.
+SAV-1003: Buyer | High | 0.90 | review=false | tokens=425/127 | The lead has financing ready and is looking to tour properties this week, indicating a strong urgency to purchase. Their timeline is ASAP, which elevates the priority.
+Next: Schedule a call today to discuss suitable properties.
+Draft: Hi there! I see you're interested in touring properties in Asheville this week. Let's schedule a call today to discuss your preferences and find the best options for you.
+SAV-1004: Buyer | Medium | 0.70 | review=false | tokens=426/135 | The lead is interested in purchasing a property within 3-6 months and has a clear budget. However, they have not provided an email address, which affects the confidence level.
+Next: Contact via text to request email address.
+Draft: Hi there! I noticed you're interested in properties in Black Mountain, NC. Could you please share your email address so I can send you more information? Looking forward to hearing from you!
+SAV-1005: Buyer | Medium | 0.60 | review=true | tokens=423/83 | The lead is interested in investment properties but lacks a clear timeline and phone number for follow-up. The budget indicates serious intent.
+Next: Find contact info
+SAV-1006: Buyer | Medium | 0.70 | review=false | tokens=420/138 | The lead has a clear intent to buy within 90 days but is still in the research phase, wanting to understand the process before making a decision.
+Next: Schedule a call to discuss the buying process.
+Draft: Hi there! I see you're interested in understanding the buying process for a short-term rental in Asheville. I'd love to schedule a call to go over everything and answer any questions you might have. Please let me know your availability!
+SAV-1007: Seller | Medium | 0.70 | review=false | tokens=423/146 | The lead is considering selling within 30-60 days and has expressed interest in discussing listing options, indicating clear intent. However, the decision is contingent on the numbers making sense, which adds some uncertainty.
+Next: Schedule a conversation about listing options.
+Draft: Hi there! I noticed you're interested in discussing your listing options for your property in Arden, NC. Let's schedule a time to chat about how we can help you make the best decision. Please let me know your availability!
+SAV-1008: Property Management | Medium | 0.70 | review=false | tokens=416/141 | The lead has a clear intent for property management services and a timeline of 30 days. However, the budget is not provided, which is typical for property management inquiries.
+Next: Schedule a call to discuss management services.
+Draft: Hi there! Thank you for reaching out about property management services for your short-term rentals in Asheville. I'd love to schedule a call to discuss your needs and how we can assist you. Please let me know your availability.
+SAV-1009: Buyer | High | 0.90 | review=false | tokens=423/143 | The lead is looking to purchase a property within 30 days and has a clear budget, indicating urgency. The referral from a past client adds credibility to their intent.
+Next: Schedule a property tour this week.
+Draft: Hi there! Thank you for reaching out and for the referral. I'd love to discuss your interest in properties with strong rental potential in Waynesville, NC. Can we schedule a call or a property tour this week to go over your options?
+SAV-1010: Buyer | High | 0.60 | review=true | tokens=422/135 | The lead is looking to buy and has an urgent timeline, but they are already under contract elsewhere, which complicates their situation. They need assistance with STR regulations and investment risks.
+Next: Schedule a consultation to discuss STR regulations and investment risks.
+Draft: Hi there, I understand you're looking for urgent help with STR regulations and investment risks. Let's schedule a consultation to discuss your needs further. Please let me know your availability.
+SAV-1011: Buyer | High | 0.90 | copied from SAV-1001 | tokens=n/a
+Next: No follow-up, duplicate of SAV-1001. Confirm in CRM.
+SAV-1012: Buyer | Low | 0.60 | review=true | tokens=419/84 | The lead is currently researching properties with no immediate purchase plans and a timeline of 6 months, indicating a low urgency to buy.
+Next: Find contact info
+SAV-1013: Seller | High | 0.90 | review=false | tokens=423/130 | The lead is looking to sell urgently due to relocation and is available to discuss today, indicating a high priority. The budget is also clearly stated.
+Next: Schedule a call or meeting today.
+Draft: Hi there! I see you're looking to discuss a potential sale urgently due to your relocation. I'm available to chat today to go over the details. Please let me know a time that works for you!
+SAV-1014: Unclear | Low | 0.40 | review=true | tokens=420/92 | The lead expresses interest in asking questions about a property and possibly investing, but lacks a clear intent or timeline. The missing budget and timeline contribute to the low priority.
+Next: Find contact info
+SAV-1015: Property Management | Medium | 0.70 | review=false | tokens=415/138 | The lead is looking to compare management services and fees for their furnished home, indicating a clear intent. The timeline of 60 days suggests they are not in an immediate rush.
+Next: Send email with management service details
+Draft: Hello, thank you for reaching out regarding property management services. I would love to provide you with information on our offerings and fees. Could you please share your email address so I can send you the details?
+SAV-1016: Buyer | High | 0.80 | review=false | tokens=427/154 | The lead has a clear intent to purchase a property within 30 days and has a specified budget. They are also inquiring about short-term rental regulations, indicating serious interest.
+Next: Schedule a call to discuss property options and regulations.
+Draft: Hi there! Thank you for reaching out about purchasing a property in Hendersonville, NC. I'd love to discuss your preferences for a 2-3 bedroom property and provide information on short-term rental regulations in the area. When would be a good time for us to chat?
+SAV-1017: Seller | Medium | 0.70 | review=false | tokens=423/146 | The lead is looking for an estimate of current market value and has a clear timeline of 90 days, indicating they are considering selling but not ready to list yet.
+Next: Provide market value estimate
+Draft: Hi there, thank you for reaching out! I can provide you with an estimate of the current market value for your property in Weaverville, NC. Please let me know if you have any specific details about the property that might help in providing a more accurate estimate.
+SAV-1018: Buyer | High | 0.90 | review=false | tokens=424/158 | The lead is an experienced investor with a clear intent to purchase a higher-end property within 30 days, indicating urgency. They also want to speak with a specialist, which suggests they are ready to engage.
+Next: Schedule a call with a specialist this week.
+Draft: Hi there! Thank you for reaching out to us about your interest in purchasing a higher-end property in Asheville, NC. I'd love to connect you with one of our specialists to discuss your needs further. Please let me know a good time for us to chat this week!
+SAV-1019: Unclear | Low | 0.40 | review=true | tokens=426/86 | The lead shows interest but lacks specific details about their intent, timeline, and budget. This makes it difficult to assess urgency or priority.
+Next: Find contact info
+SAV-1020: Buyer | High | 0.90 | review=false | tokens=421/122 | The lead has proof of funds and is looking to schedule a showing within 48 hours, indicating a strong intent to purchase quickly.
+Next: Schedule a showing
+Draft: Hi there! I see that you're interested in scheduling a showing for properties in Arden, NC. Could you please provide your availability within the next 48 hours? Looking forward to assisting you!

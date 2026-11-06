@@ -1,0 +1,25 @@
+Model: gpt-4o-mini
+Run date: 2026-11-05 20:12:37
+
+AI classification
+----------------------------------------------------------------------------------------------------
+SAV-1001: Buyer | High | The lead is actively looking to purchase a short-term rental investment within 30 days and has a substantial budget of $750,000, indicating urgency.
+SAV-1002: Seller | High | The lead is actively considering selling an established vacation rental and has a clear timeline of 60 days, indicating urgency. They are seeking a valuation and net proceeds estimate, which suggests they are ready to take action.
+SAV-1003: Buyer | High | The lead is ready to act immediately, has financing in place, and wants to tour properties this week. This indicates a strong intent to purchase.
+SAV-1004: Buyer | Medium | The lead is interested in purchasing a property within 3-6 months and has a budget of $500,000. However, the lack of an email address and the inquiry being made via text indicates they are still in the early stages of their search.
+SAV-1005: Buyer | Low | The lead is interested in investment properties but lacks a phone number and a clear timeline for action, indicating they may be in the early stages of research.
+SAV-1006: Buyer | Medium | The lead is interested in purchasing a property within 90 days but is still in the process of understanding the buying process, indicating they are not yet ready to act.
+SAV-1007: Seller | High | The lead is a potential seller who is considering listing their property within 30-60 days and has expressed interest in discussing options, indicating urgency.
+SAV-1008: Property Management | High | The lead is actively seeking management support for their two short-term rentals and has a timeline of 30 days, indicating urgency.
+SAV-1009: Buyer | High | The lead is a buyer referred by a past client, indicating a strong interest and trust. With a budget of $800,000 and a timeline of 30 days, they are ready to act quickly.
+SAV-1010: Buyer | High | The lead is actively looking to purchase a short-term rental and has an urgent timeline. They are already under contract but need immediate assistance with regulations and risks, indicating readiness to act.
+SAV-1011: skipped (duplicate of SAV-1001)
+SAV-1012: Buyer | Low | The lead is researching mountain properties and has no immediate purchase plans, indicating a distant timeline for action.
+SAV-1013: Seller | High | The lead is looking to sell their property urgently due to a relocation and is available to discuss today, indicating a high level of urgency.
+SAV-1014: Unclear | Low | The lead expresses interest in asking questions about a property and possibly investing, but lacks a clear intent or timeline for action. Additionally, the missing budget and ambiguous lead type suggest they may still be in the research phase.
+SAV-1015: Property Management | Medium | The lead is interested in comparing management services and fees for their furnished home, indicating a potential need for property management. However, the lack of a specified budget and the 60-day timeline suggest they are still in the research phase.
+SAV-1016: Buyer | High | The lead is looking to purchase a property within 30 days and has a clear budget of $525,000. Their inquiry about short-term rental regulations indicates they are serious about investing in the area.
+SAV-1017: Seller | Medium | The lead is a seller looking for a market value estimate but is not ready to list the property yet. With a 90-day timeline, they are not urgent but are considering selling.
+SAV-1018: Buyer | High | The lead is an experienced investor with a clear budget of $1,200,000 and a short timeline of 30 days, indicating urgency to purchase a property.
+SAV-1019: Unclear | Low | The lead shows interest but lacks specific details about their intent, budget, and timeline, making it difficult to assess urgency.
+SAV-1020: Buyer | High | The lead is a buyer with a budget of $675,000 and is ready to act ASAP, wanting to schedule a showing within 48 hours. They also have proof of funds, indicating a serious intent to purchase.

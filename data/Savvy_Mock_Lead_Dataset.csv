@@ -1,0 +1,21 @@
+Lead_ID,Full_Name,Email,Phone,Lead_Source,Lead_Type,Property_Location,Budget_USD,Purchase_or_Action_Timeline,Inquiry_Notes,Current_Status,Data_Notes
+SAV-1001,Sarah Mitchell,sarah.mitchell@example.com,+1-202-555-0101,Facebook Ads,STR Buyer,"Asheville, NC",750000.0,30 days,Looking for a short-term rental investment near downtown. Wants to move quickly.,New,
+SAV-1002,Daniel Brooks,daniel.brooks@example.com,+1-202-555-0102,Website,STR Seller,"Hendersonville, NC",625000.0,60 days,Considering selling an established vacation rental. Wants a valuation and net proceeds estimate.,New,
+SAV-1003,Emily Carter,emily.carter@example.com,+1-202-555-0103,Referral,STR Buyer,"Asheville, NC",900000.0,ASAP,Has financing ready and wants to tour suitable properties this week. Prefers a call today.,New,
+SAV-1004,Michael Turner,,+1-202-555-0104,Facebook Ads,STR Buyer,"Black Mountain, NC",500000.0,3-6 months,Interested but has not shared an email address. Asked for information by text.,New,
+SAV-1005,Olivia Reed,olivia.reed@example.com,,Website,STR Buyer,"Weaverville, NC",550000.0,Unknown,Asked about investment properties but did not provide a phone number or timeline.,New,
+SAV-1006,Noah Bennett,noah.bennett@example.com,+1-202-555-0106,Google Ads,STR Buyer,"Asheville, NC",450000.0,90 days,Wants to understand the process before deciding whether to buy.,New,
+SAV-1007,Ava Foster,ava.foster@example.com,+1-202-555-0107,Instagram,STR Seller,"Arden, NC",710000.0,30-60 days,May sell if the numbers make sense. Requested a conversation about listing options.,New,
+SAV-1008,Liam Cooper,liam.cooper@example.com,+1-202-555-0108,Direct Inquiry,Property Management,"Asheville, NC",,30 days,Owns two short-term rentals and is looking for management support.,New,
+SAV-1009,Sophia Hayes,sophia.hayes@example.com,+1-202-555-0109,Referral,STR Buyer,"Waynesville, NC",800000.0,30 days,Referred by a past client. Interested in a property with strong rental potential.,New,
+SAV-1010,James Perry,james.perry@example.com,+1-202-555-0110,Website,STR Buyer,"Asheville, NC",650000.0,ASAP,Already under contract elsewhere but needs urgent help understanding STR regulations and investment risks.,New,
+SAV-1011,Sarah Mitchell,sarah.mitchell@example.com,+1-202-555-0101,Facebook Ads,STR Buyer,"Asheville, NC",750000.0,30 days,Looking for a short-term rental investment near downtown. Wants to move quickly.,New,Possible duplicate of SAV-1001
+SAV-1012,Mia Collins,mia.collins@example.com,+1-202-555-0112,Google Ads,STR Buyer,"Maggie Valley, NC",400000.0,6 months,Researching mountain properties; no immediate purchase plans.,New,
+SAV-1013,Ethan Ward,ethan.ward@example.com,+1-202-555-0113,Facebook Ads,STR Seller,"Asheville, NC",980000.0,ASAP,Needs to discuss a potential sale urgently due to a relocation. Available today.,New,
+SAV-1014,Isabella Price,isabella.price@example.com,+1-202-555-0114,Website,Other,Western NC,,Unknown,Can someone help me? I have questions about a property and possibly investing.,New,Ambiguous intent
+SAV-1015,Lucas Gray,lucas.gray@example.com,+1-202-555-0115,Referral,Property Management,"Black Mountain, NC",,60 days,Owns a furnished home and wants to compare management services and fees.,New,
+SAV-1016,Amelia Ross,amelia.ross@example.com,+1-202-555-0116,Instagram,STR Buyer,"Hendersonville, NC",525000.0,30 days,Wants a 2-3 bedroom property and asks whether the area allows short-term rentals.,New,
+SAV-1017,Benjamin Wood,ben.wood@example.com,+1-202-555-0117,Direct Inquiry,STR Seller,"Weaverville, NC",590000.0,90 days,Would like an estimate of current market value; not ready to list yet.,New,
+SAV-1018,Charlotte King,charlotte.king@example.com,+1-202-555-0118,Website,STR Buyer,"Asheville, NC",1200000.0,30 days,Experienced investor looking for a higher-end property and wants to speak with a specialist.,New,
+SAV-1019,Henry Scott,henry.scott@example.com,+1-202-555-0119,Facebook Ads,Unknown,"Asheville, NC",,Unknown,Clicked an ad and wrote: 'Interested. Please send details.' No other context.,New,Insufficient intent
+SAV-1020,Grace Bell,grace.bell@example.com,+1-202-555-0120,Referral,STR Buyer,"Arden, NC",675000.0,ASAP,Has proof of funds and wants to schedule a showing within 48 hours.,New,
