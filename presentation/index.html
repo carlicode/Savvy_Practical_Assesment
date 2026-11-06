@@ -83,9 +83,6 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
 .tag.pass{color:var(--green);background:var(--green-soft);border-color:rgba(61,220,151,.35)}
 .tag.fail{color:var(--red);background:var(--red-soft);border-color:rgba(255,122,122,.35)}
 
-/* tech-only / business-only */
-body.view-business .tech-only{display:none!important}
-body.view-technical .biz-only{display:none!important}
 
 /* ---------- cover ---------- */
 .cover{background:radial-gradient(1000px 560px at 78% 18%,rgba(31,192,229,.14),transparent 60%),radial-gradient(800px 480px at 5% 95%,rgba(11,45,74,.06),transparent 60%),#fff!important;overflow:hidden}
@@ -326,10 +323,6 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
   <span class="divider"></span>
   <span class="doc-title">AI Lead Triage · Practical Assessment</span>
   <span class="spacer"></span>
-  <div class="toggle" role="group" aria-label="Presentation view">
-    <button type="button" data-view="business" class="active">Business</button>
-    <button type="button" data-view="technical">Technical</button>
-  </div>
   <span class="counter" id="counter">01 / 16</span>
 </header>
 <div class="progress" id="progress"></div>
@@ -344,7 +337,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
     <h1 class="reveal">AI-Assisted <em>Lead Triage</em></h1>
     <p class="sub reveal">A first-pass workflow that turns raw inbound leads into a prioritized, routed and human-reviewed queue, so the right lead reaches the right person, fast.</p>
   </div>
-  <div class="hint"><kbd>→</kbd> or scroll to navigate · switch <b style="color:var(--text)">Business / Technical</b> at the top</div>
+  <div class="hint"><kbd>→</kbd> or scroll to navigate</div>
 </section>
 
 <!-- 2 · QUESTIONS -->
@@ -402,8 +395,8 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
     <p class="lead">I split the work into small sprints. Each one ended with me reviewing the real output before moving on, which is how most of the problems on the next slides were caught.</p>
     <div class="sprints">
       <div class="sprint reveal"><span class="dot">0</span><div class="card"><div class="k">Sprint 0</div><h3>Discovery</h3><ul><li>Read the brief and the data</li><li>Wrote the 5 questions</li><li>Defined success: the 4 test cases</li></ul></div></div>
-      <div class="sprint reveal"><span class="dot">1</span><div class="card"><div class="k">Sprint 1</div><h3>Data foundation</h3><ul><li>Load and keep every Lead_ID</li><li>Validate and normalize</li><li>Link duplicates</li><li class="tech-only">No AI yet: rules only</li></ul></div></div>
-      <div class="sprint reveal"><span class="dot">2</span><div class="card"><div class="k">Sprint 2</div><h3>AI layer</h3><ul><li>Classify and prioritize</li><li>Calibrate the criteria</li><li>Next action and draft</li><li class="tech-only"><span id="sp-runs">7</span> logged runs</li></ul></div></div>
+      <div class="sprint reveal"><span class="dot">1</span><div class="card"><div class="k">Sprint 1</div><h3>Data foundation</h3><ul><li>Load and keep every Lead_ID</li><li>Validate and normalize</li><li>Link duplicates</li></ul></div></div>
+      <div class="sprint reveal"><span class="dot">2</span><div class="card"><div class="k">Sprint 2</div><h3>AI layer</h3><ul><li>Classify and prioritize</li><li>Calibrate the criteria</li><li>Next action and draft</li></ul></div></div>
       <div class="sprint reveal"><span class="dot">3</span><div class="card"><div class="k">Sprint 3</div><h3>Routing &amp; proof</h3><ul><li>Rule-based routing</li><li>Cost per lead</li><li>CSV export</li><li>PASS / FAIL tests</li></ul></div></div>
       <div class="sprint reveal"><span class="dot">4</span><div class="card"><div class="k">Sprint 4</div><h3>Delivery</h3><ul><li>README</li><li>This presentation</li><li>AWS Amplify</li></ul></div></div>
     </div>
@@ -419,13 +412,13 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
     <p class="lead">Only one of the seven steps uses AI: reading free-text notes. Everything that must always be true is enforced in code.</p>
     <div class="legend"><span class="tag code">Code: deterministic</span><span class="tag ai">AI: judgment</span><span class="tag human">Human: final say</span></div>
     <div class="flow">
-      <div class="card step reveal"><span class="num">01</span><span class="tag code">Code</span><h3>Load</h3><p>Read the CSV. Every Lead_ID kept unchanged.</p><span class="file tech-only">pipeline/data.py</span></div>
-      <div class="card step reveal"><span class="num">02</span><span class="tag code">Code</span><h3>Validate</h3><p>Clean email, phone, budget. Timeline in days. Flag gaps.</p><span class="file tech-only">pipeline/data.py</span></div>
-      <div class="card step reveal"><span class="num">03</span><span class="tag code">Code</span><h3>Link duplicates</h3><p>Same email or phone → linked, never merged.</p><span class="file tech-only">pipeline/duplicates.py</span></div>
-      <div class="card step ai reveal"><span class="num">04</span><span class="tag ai">AI</span><h3>Understand</h3><p>Intent, priority, confidence, next step and a draft reply.</p><span class="file tech-only">pipeline/ai.py</span></div>
-      <div class="card step reveal"><span class="num">05</span><span class="tag code">Code</span><h3>Guardrails &amp; route</h3><p>Safety rules decide the team or human review.</p><span class="file tech-only">pipeline/ai.py · output.py</span></div>
-      <div class="card step reveal"><span class="num">06</span><span class="tag code">Code</span><h3>Track cost</h3><p>Tokens and dollars per lead and per run.</p><span class="file tech-only">pipeline/output.py</span></div>
-      <div class="card step reveal"><span class="num">07</span><span class="tag code">Code</span><h3>Export queue</h3><p>Sorted CSV plus automatic test checks.</p><span class="file tech-only">output/processed_leads.csv</span></div>
+      <div class="card step reveal"><span class="num">01</span><span class="tag code">Code</span><h3>Load</h3><p>Read the CSV. Every Lead_ID kept unchanged.</p></div>
+      <div class="card step reveal"><span class="num">02</span><span class="tag code">Code</span><h3>Validate</h3><p>Clean email, phone, budget. Timeline in days. Flag gaps.</p></div>
+      <div class="card step reveal"><span class="num">03</span><span class="tag code">Code</span><h3>Link duplicates</h3><p>Same email or phone → linked, never merged.</p></div>
+      <div class="card step ai reveal"><span class="num">04</span><span class="tag ai">AI</span><h3>Understand</h3><p>Intent, priority, confidence, next step and a draft reply.</p></div>
+      <div class="card step reveal"><span class="num">05</span><span class="tag code">Code</span><h3>Guardrails &amp; route</h3><p>Safety rules decide the team or human review.</p></div>
+      <div class="card step reveal"><span class="num">06</span><span class="tag code">Code</span><h3>Track cost</h3><p>Tokens and dollars per lead and per run.</p></div>
+      <div class="card step reveal"><span class="num">07</span><span class="tag code">Code</span><h3>Export queue</h3><p>Sorted CSV plus automatic test checks.</p></div>
     </div>
     <div class="review-lane reveal">
       <span class="tag human">Human review</span>
@@ -452,11 +445,6 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
       <div class="routebar" id="routebar"></div>
       <div class="routekeys" id="routekeys"></div>
     </div>
-    <div class="grid g3 tech-only" style="margin-top:18px">
-      <div class="card"><div class="k">AI calls</div><div class="mono" style="font-size:22px"><span id="t-calls">19</span> <span class="small">(duplicate skipped)</span></div></div>
-      <div class="card"><div class="k">Tokens</div><div class="mono" style="font-size:22px"><span id="t-tin">0</span> in · <span id="t-tout">0</span> out</div></div>
-      <div class="card"><div class="k">Cost per AI call</div><div class="mono" style="font-size:22px" id="t-cpl">$0.00015</div></div>
-    </div>
   </div>
 </section>
 
@@ -473,7 +461,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
     <div class="table-wrap reveal">
       <div class="table-scroll">
         <table>
-          <thead><tr><th style="width:28px"></th><th>Lead</th><th>Intent</th><th>Priority</th><th class="hide-sm">Confidence</th><th>Route</th><th class="hide-sm">Next action</th><th class="tech-only hide-sm">Cost</th></tr></thead>
+          <thead><tr><th style="width:28px"></th><th>Lead</th><th>Intent</th><th>Priority</th><th class="hide-sm">Confidence</th><th>Route</th><th class="hide-sm">Next action</th></tr></thead>
           <tbody id="queue"></tbody>
         </table>
       </div>
@@ -514,32 +502,26 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
     <div class="grid g3">
       <div class="card issue reveal"><div class="num">01</div><h3>Everything looked urgent</h3>
         <dl><dt>Problem</dt><dd><span id="iss-high">11</span> of 19 leads came back High.</dd>
-        <dt class="tech-only">Cause</dt><dd class="tech-only">A vague rule: "High = urgent or ready to act".</dd>
         <dt>Fix</dt><dd>Clear criteria: High means ASAP, funds ready or a tour this week.</dd>
         <dt>Lesson</dt><dd class="lesson">If everything is urgent, nothing is.</dd></dl></div>
       <div class="card issue reveal"><div class="num">02</div><h3>The AI could see the answers</h3>
         <dl><dt>Problem</dt><dd>Manual notes like "Ambiguous intent" were reaching the model.</dd>
-        <dt class="tech-only">Cause</dt><dd class="tech-only">Payload built as "everything except PII" (a block-list).</dd>
         <dt>Fix</dt><dd>An allow-list: the AI gets only the fields it needs.</dd>
         <dt>Lesson</dt><dd class="lesson">Test with what production will really have.</dd></dl></div>
       <div class="card issue reveal"><div class="num">03</div><h3>A privacy fix created a bug</h3>
         <dl><dt>Problem</dt><dd><span id="iss-fc">4</span> leads got "Find contact info" though they had an email. One draft asked for an email we already had.</dd>
-        <dt class="tech-only">Cause</dt><dd class="tech-only">Without contact data, the model guessed the channel.</dd>
         <dt>Fix</dt><dd>Code computes the channel and sends only a label: email, text or none.</dd>
         <dt>Lesson</dt><dd class="lesson">Hide the data, not the fact the AI needs.</dd></dl></div>
       <div class="card issue reveal"><div class="num">04</div><h3>A rule the AI didn't always follow</h3>
         <dl><dt>Problem</dt><dd>An unclear lead came back as Medium priority.</dd>
-        <dt class="tech-only">Cause</dt><dd class="tech-only">Prompts guide the model; they don't guarantee it.</dd>
         <dt>Fix</dt><dd>"Unclear = Low" is now enforced in code.</dd>
         <dt>Lesson</dt><dd class="lesson">If a rule must always hold, it belongs in code.</dd></dl></div>
       <div class="card issue reveal"><div class="num">05</div><h3>Same lead, different answer</h3>
         <dl><dt>Problem</dt><dd>SAV-1016 was High in one run and Medium in the next.</dd>
-        <dt class="tech-only">Cause</dt><dd class="tech-only">LLM output varies slightly even at temperature 0.</dd>
         <dt>Fix</dt><dd>Every run is logged. Documented as the main limitation.</dd>
         <dt>Lesson</dt><dd class="lesson">Measure, don't assume.</dd></dl></div>
       <div class="card issue reveal"><div class="num">06</div><h3>The environment fought back</h3>
         <dl><dt>Problem</dt><dd>Installs were blocked, and one run used an unsaved file.</dd>
-        <dt class="tech-only">Cause</dt><dd class="tech-only">System Python is externally managed (PEP 668).</dd>
         <dt>Fix</dt><dd>An isolated virtual environment and pinned versions.</dd>
         <dt>Lesson</dt><dd class="lesson">Reproducibility starts with the setup.</dd></dl></div>
     </div>
@@ -560,72 +542,13 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
       <div class="card sec reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg></div><h3>Fails safe</h3><p>If the AI fails or returns something invalid, the lead goes to a person. The run never stops halfway.</p></div>
       <div class="card sec reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4zM9 9h6v6H9z"/></svg></div><h3>No live AI on the web</h3><p>This page shows pre-computed results, so there's no key in the browser and nobody can run up costs.</p></div>
     </div>
-    <div class="payload tech-only">
-      <div class="card"><div class="k">Sent to the model (allow-list)</div>
-        <div class="fieldlist in"><span>Lead_Source</span><span>Lead_Type</span><span>Property_Location</span><span>Budget_USD_Normalized</span><span>Purchase_or_Action_Timeline</span><span>Timeline_Days</span><span>Inquiry_Notes</span><span>Current_Status</span><span>Data_Flags*</span><span>contact_channel</span><span>missing_contact</span></div>
-        <p class="small" style="margin-top:10px">* contact-related flags replaced by the two computed labels.</p></div>
-      <div class="card"><div class="k">Never sent</div>
-        <div class="fieldlist out"><span>Full_Name</span><span>Email</span><span>Phone</span><span>Lead_ID</span><span>Data_Notes</span><span>duplicate_of</span></div>
-        <p class="small" style="margin-top:10px">Output validated against a Pydantic schema · dependencies pinned · every run logged with model and timestamp.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- 12 · UNDER THE HOOD (technical only) -->
-<section class="slide tech-only" data-title="Under the hood">
-  <div class="inner">
-    <div class="eyebrow">11 · Under the hood</div>
-    <h2>Small modules, <em>one job each</em></h2>
-    <div class="grid g2">
-      <div>
-        <pre><div class="term-title"><i></i><i></i><i></i><span>project structure</span></div><span class="k">triage.py</span>              <span class="c"># entry point: CSV path + step order</span>
-<span class="k">pipeline/</span>
-  data.py              <span class="c"># 1-2 load, normalize, quality flags</span>
-  duplicates.py        <span class="c"># 3   link duplicates, never merge</span>
-  ai.py                <span class="c"># 4   OpenAI call, schema, guardrails</span>
-  output.py            <span class="c"># 5-7 routing, cost, CSV, tests</span>
-<span class="k">data/</span>                  <span class="c"># source CSV (fictional)</span>
-<span class="k">output/</span>                <span class="c"># run logs + processed_leads.csv</span>
-<span class="k">presentation/</span>          <span class="c"># this page, built from output/</span></pre>
-        <pre style="margin-top:16px"><div class="term-title"><i></i><i></i><i></i><span>pipeline/ai.py · response schema</span></div><span class="k">class</span> LeadAIResult(BaseModel):
-    intent: Literal[<span class="s">"Buyer"</span>, <span class="s">"Seller"</span>,
-                    <span class="s">"Property Management"</span>, <span class="s">"Unclear"</span>]
-    priority: Literal[<span class="s">"High"</span>, <span class="s">"Medium"</span>, <span class="s">"Low"</span>]
-    rationale: str
-    confidence: float = Field(ge=<span class="k">0</span>, le=<span class="k">1</span>)
-    risk_or_contradiction: bool
-    next_action: str
-    draft_followup: str</pre>
-      </div>
-      <div>
-        <pre><div class="term-title"><i></i><i></i><i></i><span>guardrails · enforced in code after the AI replies</span></div><span class="k">def</span> needs_human_review(row, result):
-    <span class="k">return</span> (
-        result.intent == <span class="s">"Unclear"</span>
-        <span class="k">or</span> <span class="s">"lead_type_unclear"</span> <span class="k">in</span> flags
-        <span class="k">or</span> row[<span class="s">"possible_duplicate_of"</span>]
-        <span class="k">or</span> both_contacts_missing(row)
-        <span class="k">or</span> result.confidence &lt; <span class="k">0.7</span>
-        <span class="k">or</span> result.risk_or_contradiction  <span class="c"># the only AI-judged rule</span>
-    )
-
-<span class="c"># routing: Human review always wins</span>
-<span class="k">if</span> review <span class="k">or</span> duplicate <span class="k">or</span> ai_error:
-    route = <span class="s">"Human review"</span>
-<span class="k">else</span>:
-    route = TEAM_BY_INTENT[intent]</pre>
-        <div class="grid g2" style="margin-top:16px">
-          <div class="card"><div class="k">Model</div><div class="mono">gpt-4o-mini · temperature 0 · JSON mode</div></div>
-          <div class="card"><div class="k">Priority rule</div><div class="small">High: ASAP / ≤7 days, funds ready, tour this week, urgent sale. Medium: clear intent, 30–90 days. Low: research, 6+ months, unknown or unclear.</div></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- 13 · COST & ROI -->
 <section class="slide" data-title="Cost & ROI">
   <div class="inner">
-    <div class="eyebrow">12 · Cost &amp; value</div>
+    <div class="eyebrow">11 · Cost &amp; value</div>
     <h2>Fractions of a cent per lead, <em>hours back for the team</em></h2>
     <p class="lead">AI cost is measured from real token usage. Time saved depends on your team, so the assumptions below are yours to edit.</p>
     <div class="calc">
@@ -635,7 +558,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
           <thead><tr><th>Volume</th><th>AI cost</th></tr></thead>
           <tbody id="proj"></tbody>
         </table>
-        <p class="small" style="margin-top:14px">gpt-4o-mini at $0.15 / 1M input and $0.60 / 1M output tokens (standard rate). <span class="tech-only">Batch API would halve this for non-urgent backfills.</span> Hosting a static page on Amplify adds only cents at this traffic.</p>
+        <p class="small" style="margin-top:14px">gpt-4o-mini at $0.15 / 1M input and $0.60 / 1M output tokens (standard rate). Hosting a static page on Amplify adds only cents at this traffic.</p>
       </div>
       <div class="card reveal">
         <div class="k">Value calculator · assumptions</div>
@@ -654,7 +577,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
 <!-- 14 · SCALE -->
 <section class="slide" data-title="At scale">
   <div class="inner">
-    <div class="eyebrow">13 · What if it scales?</div>
+    <div class="eyebrow">12 · What if it scales?</div>
     <h2>Built for a sample, <em>designed to grow</em></h2>
     <p class="lead">Some choices are right for 20 fictional leads and wrong for 20,000 real ones. Here's what I'd change, and why.</p>
     <table class="scale reveal">
@@ -663,11 +586,8 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
         <tr><td>CSV loaded by hand</td><td>Sample data, one batch</td><td>CRM webhook (e.g. GoHighLevel): each lead triaged the moment it arrives</td></tr>
         <tr><td>One AI call per lead, in sequence</td><td>19 calls take seconds</td><td>Parallel calls with retries and back-off; Batch API for backfills</td></tr>
         <tr><td>Exact duplicate match in memory</td><td>One obvious duplicate</td><td>Database plus fuzzy matching, and checks against leads already in the CRM</td></tr>
-        <tr class="tech-only"><td>Console, text logs, CSV</td><td>Easy to inspect</td><td>Database plus a live dashboard</td></tr>
-        <tr class="tech-only"><td>API key in a local .env</td><td>Local and simple</td><td>AWS Secrets Manager with rotation</td></tr>
         <tr><td>Review threshold at 0.7</td><td>Better to over-review</td><td>Tuned with real outcomes so reviewers aren't flooded</td></tr>
         <tr><td>AI variability checked by eye</td><td>A handful of runs, reviewed manually</td><td>Labeled evaluation set, accuracy tracked on every change</td></tr>
-        <tr class="tech-only"><td>Cost computed at the end</td><td>Already tracks tokens</td><td>Budget alerts in CloudWatch</td></tr>
       </tbody>
     </table>
     <div class="breaks reveal">
@@ -680,7 +600,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
 <!-- 15 · AWS -->
 <section class="slide" data-title="Running on AWS">
   <div class="inner">
-    <div class="eyebrow">14 · Running on AWS</div>
+    <div class="eyebrow">13 · Running on AWS</div>
     <h2>Deployed with <em>AWS Amplify</em></h2>
     <p class="lead">Amplify connects to the GitHub repo and republishes on every push: HTTPS, a global CDN and optional password protection, with no servers to maintain.</p>
     <div class="subhead">Today · this presentation</div>
@@ -719,7 +639,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
 <!-- 16 · NEXT STEPS -->
 <section class="slide" data-title="Next steps">
   <div class="inner">
-    <div class="eyebrow">15 · Limitations &amp; next steps</div>
+    <div class="eyebrow">14 · Limitations &amp; next steps</div>
     <h2>What I'd do <em>next</em></h2>
     <p class="lead"><strong>Main limitation:</strong> the AI's priority can shift between runs for the same lead. The fix is to let code score the timeline and the AI read only the notes.</p>
     <div class="grid g3">
@@ -737,7 +657,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
 <!-- 17 · DELIVERABLES -->
 <section class="slide" data-title="Deliverables">
   <div class="inner">
-    <div class="eyebrow">16 · Deliverables</div>
+    <div class="eyebrow">15 · Deliverables</div>
     <h2>Everything is <em>open to review</em></h2>
     <p class="lead">The code, the processed output and every AI run are public on GitHub, so anyone can check the results or run the workflow themselves.</p>
     <div class="grid g3 deliverables">
@@ -766,14 +686,6 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   const ROUTE_COLORS = {"Buyer team":"#1FC0E5","Seller team":"#9BE4F4","Property Management":"#B7A6F2","Human review":"#F2A93B"};
 
-  /* ---------- view toggle ---------- */
-  const setView = v => {
-    document.body.className = "view-" + v;
-    document.querySelectorAll(".toggle button").forEach(b => b.classList.toggle("active", b.dataset.view === v));
-    try { localStorage.setItem("triage-view", v); } catch(e) {}
-    buildDots(); update();
-  };
-  document.querySelectorAll(".toggle button").forEach(b => b.addEventListener("click", () => setView(b.dataset.view)));
 
   /* ---------- navigation ---------- */
   const visibleSlides = () => [...document.querySelectorAll(".slide")].filter(s => s.offsetParent !== null || getComputedStyle(s).display !== "none");
@@ -822,16 +734,11 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
   $("#ch-leads").textContent = S.leads;
   $("#ch-sources").textContent = Object.keys(S.sources).length + " channels";
   $("#ch-missing").textContent = S.missing_contact;
-  $("#sp-runs").textContent = D.runs.length;
   $("#flow-review").textContent = S.human_review;
   $("#k-leads").textContent = S.leads;
   $("#k-high").textContent = S.high;
   $("#k-review").textContent = S.human_review;
   $("#k-cost").textContent = fmt$(S.cost, 4);
-  $("#t-calls").textContent = S.ai_calls;
-  $("#t-tin").textContent = S.tokens_in.toLocaleString();
-  $("#t-tout").textContent = S.tokens_out.toLocaleString();
-  $("#t-cpl").textContent = fmt$(S.cost_per_lead, 5);
   const firstRun = D.runs[0], lastRun = D.runs[D.runs.length - 1];
   $("#iss-high").textContent = firstRun.high;
   $("#iss-fc").textContent = Math.max(...D.runs.map(r => r.find_contact));
@@ -870,14 +777,12 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
         <td class="hide-sm">${conf}</td>
         <td><span class="route"><i style="background:${ROUTE_COLORS[l.route]||"#888"}"></i>${esc(l.route)}</span></td>
         <td class="hide-sm small">${esc(l.next_action)}</td>
-        <td class="tech-only hide-sm mono small">${l.cost_usd ? fmt$(l.cost_usd, 5) : "$0"}</td>
       </tr>
       <tr class="detail" hidden><td colspan="8"><div class="box">
         <div><h4>What the lead wrote</h4><p>"${esc(l.notes)}"</p><h4 style="margin-top:14px">Why this priority</h4><p>${esc(l.rationale || "Copied from the primary record.")}</p></div>
         <div><h4>Draft follow-up</h4>${draft}</div>
         <div><h4>Data flags</h4><div>${flags}</div>
-          <h4 style="margin-top:14px">Routing</h4><p>${esc(l.route)}${l.route === "Human review" && l.suggested_team ? " → then " + esc(l.suggested_team) : ""}</p>
-          <p class="small tech-only" style="margin-top:10px">Tokens ${l.tokens_in}/${l.tokens_out} · ${fmt$(l.cost_usd, 6)}</p></div>
+          <h4 style="margin-top:14px">Routing</h4><p>${esc(l.route)}${l.route === "Human review" && l.suggested_team ? " → then " + esc(l.suggested_team) : ""}</p></div>
       </div></td></tr>`;
     }).join("");
     document.querySelectorAll("#queue tr.main").forEach(tr => {
@@ -965,8 +870,7 @@ input[type=range]{width:100%;accent-color:var(--cyan-fill);height:4px}
   $("#sc-cost").textContent = fmt$(10000 * cpl, 2);
 
   /* ---------- start ---------- */
-  let saved = "business"; try { saved = localStorage.getItem("triage-view") || "business"; } catch(e) {}
-  setView(saved);
+  buildDots(); update();
   document.querySelectorAll(".slide").forEach(s => { if (s.getBoundingClientRect().top < innerHeight) s.classList.add("in"); });
 })();
 </script>

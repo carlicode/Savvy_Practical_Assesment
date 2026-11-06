@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 # Notebook download copy
 data/downloaded_leads.csv
+
+# Personal video script (not a deliverable)
+video_script.pdf
